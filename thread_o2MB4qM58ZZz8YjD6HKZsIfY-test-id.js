@@ -1,0 +1,1 @@
+Please provide the full details of the test case, including the title, preconditions, test steps, and expected results, so I can accurately create the JavaScript code for web automation testing using Playwright based on your specifications.
