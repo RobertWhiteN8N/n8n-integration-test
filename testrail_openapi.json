@@ -1,0 +1,53 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "TestRail API",
+      "version": "1.0.0",
+      "description": "Получение тест-кейсов из TestRail (GetTestCases)"
+    },
+    "servers": [
+      {
+        "url": "https://personalactivitiesn8n.testrail.io/index.php?/api/v2"
+      }
+    ],
+    "paths": {
+      "/get_cases/1": {
+        "get": {
+          "summary": "Get test cases from project ID 1 and suite ID 2",
+          "operationId": "GetTestCases",
+          "parameters": [
+            {
+              "name": "suite_id",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "example": 2
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response"
+            },
+            "401": {
+              "description": "Unauthorized"
+            }
+          },
+          "security": [
+            {
+              "BasicAuth": []
+            }
+          ]
+        }
+      }
+    },
+    "components": {
+      "securitySchemes": {
+        "BasicAuth": {
+          "type": "http",
+          "scheme": "basic"
+        }
+      }
+    }
+  }
